@@ -3,9 +3,9 @@ function curry(functionToBeCurried) {
     if (args.length >= functionToBeCurried.length) {
       return functionToBeCurried.apply(this, args);
     }
-    return (...argsLocal) =>
+    return (...argsNew) =>
       // eslint-disable-next-line implicit-arrow-linebreak
-      curriedFunction.apply(this, [...args, ...argsLocal]);
+      curriedFunction.apply(this, [...args, ...argsNew]);
   };
 }
 
